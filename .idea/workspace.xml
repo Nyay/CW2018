@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d28b725d-fd22-46df-a928-5e260c5b06cb" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/poopo.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CW2018.db" afterPath="$PROJECT_DIR$/CW2018.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyzer.py" afterPath="$PROJECT_DIR$/analyzer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/numerise.py" afterPath="$PROJECT_DIR$/numerise.py" />
     </list>
     <ignored path="CW2018.iws" />
