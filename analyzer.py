@@ -1,12 +1,13 @@
 from pymystem3 import Mystem
 import re
+import sqlite3
 
 mystem = Mystem()
 
-output = open('analyzer.txt', 'w', encoding='UTF-8')
-
 
 def main():
+    db = sqlite3.connect('CW2018.db')
+    print('...DataBase connected...')
     for i in range(1, 585):
         try:
             line_num = 1
@@ -20,11 +21,18 @@ def main():
                 word_num = 1
                 for el in data:
                     if 'analysis' in el:
-                        yield str(text_num) + '.' + str(line_num) + '.' + str(word_num) + ' ' + str(el)
+                        sim = (str(text_num) + '.' + str(line_num) + '.' + str(word_num))
+                        word = el['text']
+                        data = el['analysis']
+                        db.execute('INSERT INTO words VALUES (?, ?, ?)', (str(word), str(sim), str(data)))
+                        db.commit()
                         word_num += 1
                 line_num += 1
             print('... TEXT ' + str(i) + ' ANALYSIS COMPLETE...')
         except FileNotFoundError:
             continue
+    db.close()
+    print('...DataBase closed...')
 
-output.write('\n'.join(main()))
+if __name__ == '__main__':
+    main()
