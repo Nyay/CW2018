@@ -24,7 +24,19 @@ def main():
                         sim = (str(text_num) + '.' + str(line_num) + '.' + str(word_num))
                         word = el['text']
                         data = el['analysis']
-                        db.execute('INSERT INTO words VALUES (?, ?, ?)', (str(word), str(sim), str(data)))
+                        if data == []:
+                            lex = '-'
+                            qual = '-'
+                            gr = '-'
+                        else:
+                            lex = data[0]['lex']
+                            try:
+                                qual = data[0]['qual']
+                            except:
+                                qual = 'normal'
+                            gr = data[0]['gr']
+                        db.execute('INSERT INTO words_ver2 VALUES (?, ?, ?, ?, ?)',
+                                   (str(word), str(sim), str(lex), str(qual), str(gr)))
                         db.commit()
                         word_num += 1
                 line_num += 1
