@@ -1,0 +1,216 @@
+
+<html>
+<head>
+<title>Грамматические признаки</title>
+<link rel="shortcut icon" href="../yandex.ru/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./form.css">
+<style>
+.inverse	 { cursor: pointer; color: #023F7C; }
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<script language="JavaScript">
+function parse_grams(str) {
+	var grams = str.split(/[&|,()]/);
+	for (i = 0; i < grams.length; i++) {
+		el = window.document.getElementById(grams[i]);
+		if (el) el.checked=true;
+	}
+}
+
+function collect() {
+	var els = document.gramForm.elements;
+	var ar = {};
+	for (var i = 0; i != els.length; i++) {
+		var el = els[i];
+		if (el.type != 'checkbox') continue;
+		if (el.checked) {
+			if (!ar[el.name])
+				ar[el.name] = '';
+			ar[el.name] += '|' + el.value
+		}
+	}
+	var s = '';
+	for (i in ar) {
+		var v = ar[i].substring(1)
+		if (v.indexOf('|') != -1) v = '(' + v + ')'
+		s += ',' + v;
+	}
+
+	s = s.substring(1)
+
+	sourceName = window.name;
+	if (window.opener && !window.opener.closed) {
+		window.opener.document.reqForm.elements[sourceName].value = s;
+	}
+	window.close();
+}
+
+function inverse(group) {
+	var els = document.gramForm.elements;
+	var ar = {};
+	for (var i = 0; i != els.length; i++) {
+		var el = els[i];
+		if (el.type != 'checkbox') continue;
+		if (el.name == group)
+			el.checked=!el.checked;
+	}
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<script type="text/javascript">
+try { var yaCounter677861 = new Ya.Metrika(677861); } catch(e){}
+</script>
+<noscript><img src="//mc.yandex.ru/watch/677861" style="position:absolute" alt="" /></noscript>
+<!-- /Yandex.Metrika -->
+
+<center>
+<form name="gramForm" action="">
+<table border=1 cellspacing=0 cellpadding=4 class="intable">
+<tr>
+<td valign="top" nowrap rowspan=3>
+<span title="Инвертировать" class="inverse" onclick="inverse('s')"><b>Часть речи</b></span><br>
+	<input type="checkbox" name="s" id="S" value="S">&nbsp;существительное<br>
+	<input type="checkbox" name="s" id="A" value="A">&nbsp;прилагательное<br>
+	<input type="checkbox" name="s" id="NUM" value="NUM">&nbsp;числительное<br>
+	<input type="checkbox" name="s" id="ANUM" value="ANUM">&nbsp;числ-прил<br>
+	<input type="checkbox" name="s" id="V" value="V">&nbsp;глагол<br>
+	<input type="checkbox" name="s" id="ADV" value="ADV">&nbsp;наречие<br>
+	<input type="checkbox" name="s" id="PRAEDIC" value="PRAEDIC">&nbsp;предикатив<br>
+	<input type="checkbox" name="s" id="PARENTH" value="PARENTH">&nbsp;вводное слово<br>
+	<input type="checkbox" name="s" id="SPRO" value="SPRO">&nbsp;мест-сущ<br>
+	<input type="checkbox" name="s" id="APRO" value="APRO">&nbsp;мест-прил<br>
+	<input type="checkbox" name="s" id="PRAEDICPRO" value="PRAEDICPRO">&nbsp;мест-предикатив<br>
+	<input type="checkbox" name="s" id="ADVPRO" value="ADVPRO">&nbsp;местоименное&nbsp;наречие<br>
+	<input type="checkbox" name="s" id="PR" value="PR">&nbsp;предлог<br>
+	<input type="checkbox" name="s" id="CONJ" value="CONJ">&nbsp;союз<br>
+	<input type="checkbox" name="s" id="PART" value="PART">&nbsp;частица<br>
+	<input type="checkbox" name="s" id="INTJ" value="INTJ">&nbsp;междометие<br>
+
+<td valign="top" nowrap rowspan=2>
+<span title="Инвертировать" class="inverse" onclick="inverse('c')"><b>Падеж</b></span><br>
+	<input type="checkbox" name="c" id="nom" value="nom">&nbsp;именительный<br>
+	<input type="checkbox" name="c" id="voc" value="voc">&nbsp;звательный*<br>
+	<input type="checkbox" name="c" id="gen" value="gen">&nbsp;родительный<br>
+	<input type="checkbox" name="c" id="gen2" value="gen2">&nbsp;родительный 2<br>
+	<input type="checkbox" name="c" id="dat" value="dat">&nbsp;дательный<br>
+	<!--<input type="checkbox" name="c" id="dat2" value="dat2">&nbsp;дательный 2*<br>-->
+	<input type="checkbox" name="c" id="acc" value="acc">&nbsp;винительный<br>
+	<input type="checkbox" name="c" id="acc2" value="acc2">&nbsp;винительный 2*<br>
+	<input type="checkbox" name="c" id="ins" value="ins">&nbsp;творительный<br>
+	<input type="checkbox" name="c" id="loc" value="loc">&nbsp;предложный<br>
+	<input type="checkbox" name="c" id="loc2" value="loc2">&nbsp;предложный&nbsp;2<br>
+	<input type="checkbox" name="c" id="adnum" value="adnum">&nbsp;счётная&nbsp;форма<br>
+
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('mf')"><b>Наклонение&nbsp;/&nbsp;Форма</b></span><br>
+	<input type="checkbox" name="mf" id="indic" value="indic" >&nbsp;изъявительное<br>
+	<input type="checkbox" name="mf" id="imper" value="imper">&nbsp;повелительное<br>
+	<input type="checkbox" name="mf" id="imper2" value="imper2">&nbsp;повелительное 2<br>
+	<input type="checkbox" name="mf" id="inf" value="inf">&nbsp;инфинитив<br>
+	<input type="checkbox" name="mf" id="partcp" value="partcp">&nbsp;причастие<br>
+	<input type="checkbox" name="mf" id="ger" value="ger">&nbsp;деепричастие<br>
+
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('q')"><b>Степень&nbsp;/&nbsp;Краткость</b></span><br>
+	<input type="checkbox" name="q" id="comp" value="comp">&nbsp;сравнительная<br>
+	<input type="checkbox" name="q" id="comp2" value="comp2">&nbsp;сравнительная 2<br>
+	<input type="checkbox" name="q" id="supr" value="supr">&nbsp;превосходная<br>
+	<input type="checkbox" name="q" id="plen" value="plen">&nbsp;полная&nbsp;форма<br>
+	<input type="checkbox" name="q" id="brev" value="brev">&nbsp;краткая&nbsp;форма<br>
+
+<tr>
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('t')"><b>Время</b></span><br>
+	<input type="checkbox" name="t" id="praes" value="praes">&nbsp;настоящее<br>
+	<input type="checkbox" name="t" id="fut" value="fut">&nbsp;будущее<br>
+	<input type="checkbox" name="t" id="praet" value="praet">&nbsp;прошедшее<br>
+
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('tr')"><b>Переходность</b></span><br>
+	<input type="checkbox" name="tr" id="tran" value="tran">&nbsp;переходный*<br>
+	<input type="checkbox" name="tr" id="intr" value="intr">&nbsp;непереходный*<br>
+
+<tr>
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('n')"><b>Число</b></span><br>
+	<input type="checkbox" name="n" id="sg" value="sg">&nbsp;единственное<br>
+	<input type="checkbox" name="n" id="pl" value="pl">&nbsp;множественное<br>
+
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('p')"><b>Лицо</b></span><br>
+	<input type="checkbox" name="p" id="1p" value="1p">&nbsp;первое<br>
+	<input type="checkbox" name="p" id="2p" value="2p">&nbsp;второе<br>
+	<input type="checkbox" name="p" id="3p" value="3p">&nbsp;третье<br>
+
+<td valign="top" nowrap rowspan=3>
+<span title="Инвертировать" class="inverse" onclick="inverse('o')"><b>Прочее</b></span><br>
+	<!--<input type="checkbox" name="o" id="norm" value="norm">&nbsp;словарная форма<br>
+-->
+	<input type="checkbox" name="o" id="ciph" value="ciph">&nbsp;цифровая запись<br>
+	<input type="checkbox" name="o" id="anom" value="anom">&nbsp;аномальная форма*<br>
+	<input type="checkbox" name="o" id="distort" value="distort">&nbsp;искаженная форма*<br>
+	<!--<input type="checkbox" name="o" id="bastard" value="bastard">&nbsp;несловарная форма**<br>
+-->
+	<input type="checkbox" name="o" id="INIT" value="INIT">&nbsp;инициал*<br>
+	<input type="checkbox" name="o" id="abbr" value="abbr">&nbsp;сокращение*<br>
+	<input type="checkbox" name="o" id="0" value="0">&nbsp;несклоняемое*<br>
+	<input type="checkbox" name="o" id="topon" value="topon">&nbsp;топоним**<br>
+<tr>
+<td valign="top" nowrap rowspan=2>
+<span title="Инвертировать" class="inverse" onclick="inverse('na')"><b>Имена собственные</b></span><br>
+	<input type="checkbox" name="na" id="famn" value="famn">&nbsp;фамилия<br>
+	<input type="checkbox" name="na" id="persn" value="persn">&nbsp;имя<br>
+	<input type="checkbox" name="na" id="patrn" value="patrn">&nbsp;отчество<br>
+	<!--<input type="checkbox" name="na" id="zoon" value="zoon">&nbsp;зооним<br>-->
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('g')"><b>Род</b></span><br>
+	<input type="checkbox" name="g" id="m" value="m">&nbsp;мужской<br>
+	<input type="checkbox" name="g" id="f" value="f">&nbsp;женский<br>
+	<input type="checkbox" name="g" id="n" value="n">&nbsp;средний<br>
+	<input type="checkbox" name="g" id="mf" value="mf">&nbsp;общий*<br>
+
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('v')"><b>Залог</b></span><br>
+	<input type="checkbox" name="v" id="act" value="act">&nbsp;действительный<br>
+	<input type="checkbox" name="v" id="pass" value="pass">&nbsp;страдательный<br>
+	<input type="checkbox" name="v" id="med" value="med">&nbsp;медиальный<br>
+
+<tr>
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('a')"><b>Одушевленность</b></span><br>
+	<input type="checkbox" name="a" id="anim" value="anim">&nbsp;одушевленное<br>
+	<input type="checkbox" name="a" id="inan" value="inan">&nbsp;неодушевленное<br>
+
+<td valign="top" nowrap rowspan=1>
+<span title="Инвертировать" class="inverse" onclick="inverse('f')"><b>Вид</b></span><br>
+	<input type="checkbox" name="f" id="pf" value="pf">&nbsp;совершенный<br>
+	<input type="checkbox" name="f" id="ipf" value="ipf">&nbsp;несовершенный<br>
+</tr>
+</table>
+
+<table align=center>
+<tr><td>
+	<input type="button" class="button" value="  OK  " onclick="collect()">
+	<input type="button" class="button" value="Очистить" onclick='document.all.gramForm.reset()'>
+	<input type="reset" class="button" value="Отмена" onclick='window.close()'>
+<tr><td>
+	<font size=-2>
+	<br>* - только в корпусе со снятой омонимией
+	<br>** - только в корпусе с неснятой омонимией
+	</font>
+</table>
+</form>
+</center>
+
+<script for=window event=onload language="JavaScript">
+parse_grams(window.opener.document.reqForm.elements[window.name].value);
+</script>
+
+</body>
+</html>
