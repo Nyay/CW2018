@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d28b725d-fd22-46df-a928-5e260c5b06cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CW2018.db" afterPath="$PROJECT_DIR$/CW2018.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyzer.py" afterPath="$PROJECT_DIR$/analyzer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_texts.py" afterPath="$PROJECT_DIR$/add_texts.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/numerise.py" afterPath="$PROJECT_DIR$/numerise.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/gramm_filter.html" afterPath="$PROJECT_DIR$/templates/gramm_filter.html" />
     </list>
     <ignored path="CW2018.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,9 +22,10 @@
     <SUITE FILE_PATH="coverage/CW2018$numerise.coverage" NAME="numerise Coverage Results" MODIFIED="1525382900830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CW2018$local_stuff.coverage" NAME="local_stuff Coverage Results" MODIFIED="1525376594803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CW2018$search.coverage" NAME="search Coverage Results" MODIFIED="1526293626455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CW2018$localPS.coverage" NAME="localPS Coverage Results" MODIFIED="1526381432387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CW2018$mystem.coverage" NAME="mystem Coverage Results" MODIFIED="1525377621502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CW2018$YDLS.coverage" NAME="YDLS Coverage Results" MODIFIED="1525894808062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CW2018$add_texts.coverage" NAME="add_texts Coverage Results" MODIFIED="1526069428079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CW2018$add_texts.coverage" NAME="add_texts Coverage Results" MODIFIED="1526381836313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CW2018$moil.coverage" NAME="moil Coverage Results" MODIFIED="1525295396417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -36,59 +37,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TextsData.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TextsData.csv">
+      <file leaf-file-name="add_texts.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/add_texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="384">
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1526293626000" expanded="true" signature="267:309" ph="SELECT id FR... words" />
-                <marker date="1526293626000" expanded="true" signature="267:310" ph="SELECT * FRO... words" />
-                <marker date="1526293626000" expanded="true" signature="267:340" ph="SELECT id FR... words" />
+                <marker date="1526381836000" expanded="true" signature="539:591" ph="INSERT INTO texts... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analyzer.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analyzer.txt">
+      <file leaf-file-name="localPS.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/localPS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="451" column="101" selection-start-line="451" selection-start-column="96" selection-end-line="451" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="analyzer.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/analyzer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+            <state relative-caret-position="304">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
-                <marker date="1526298755000" expanded="true" signature="1355:1400" ph="INSERT INTO words_ver2... " />
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1526381432000" expanded="true" signature="134:400" ph="CREATE TABLE... texts_1" />
+                <marker date="1526381432000" expanded="true" signature="926:951" ph="SELECT gr FR... words_ver2" />
+                <marker date="1526381432000" expanded="true" signature="926:967" ph="SELECT gr FR... words_ver2" />
+                <marker date="1526381432000" expanded="true" signature="926:968" ph="SELECT gr FR... words_ver2" />
+                <marker date="1526381432000" expanded="true" signature="926:969" ph="SELECT id FR... words_ver2" />
+                <marker date="1526381432000" expanded="true" signature="926:990" ph="SELECT id FR... words_ver2" />
+                <marker date="1526381432000" expanded="true" signature="926:1003" ph="SELECT gr FR... words_ver2" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Архив ВШЭ-ФЭ-69-14-2017-12-utf-8.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-12-utf-8.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -98,8 +74,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -117,11 +93,12 @@
         <option value="$PROJECT_DIR$/numerise.py" />
         <option value="$PROJECT_DIR$/input.txt" />
         <option value="$PROJECT_DIR$/YDLS.py" />
-        <option value="$PROJECT_DIR$/add_texts.py" />
         <option value="$PROJECT_DIR$/templates/semm_filter.html" />
         <option value="$PROJECT_DIR$/templates/gramm_filter.html" />
         <option value="$PROJECT_DIR$/search.py" />
         <option value="$PROJECT_DIR$/analyzer.py" />
+        <option value="$PROJECT_DIR$/localPS.py" />
+        <option value="$PROJECT_DIR$/add_texts.py" />
       </list>
     </option>
   </component>
@@ -210,25 +187,7 @@
       <recent name="$PROJECT_DIR$/../" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.analyzer">
-    <configuration default="false" name="numerise" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CW2018" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/numerise.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.add_texts">
     <configuration default="false" name="add_texts" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,6 +256,24 @@
       <module name="CW2018" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="localPS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CW2018" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/localPS.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -518,19 +495,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.numerise" />
-      <item index="1" class="java.lang.String" itemvalue="Python.add_texts" />
-      <item index="2" class="java.lang.String" itemvalue="Python.analyzer" />
-      <item index="3" class="java.lang.String" itemvalue="Python.YDLS" />
-      <item index="4" class="java.lang.String" itemvalue="Python.search" />
+      <item index="0" class="java.lang.String" itemvalue="Python.add_texts" />
+      <item index="1" class="java.lang.String" itemvalue="Python.analyzer" />
+      <item index="2" class="java.lang.String" itemvalue="Python.YDLS" />
+      <item index="3" class="java.lang.String" itemvalue="Python.search" />
+      <item index="4" class="java.lang.String" itemvalue="Python.localPS" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.analyzer" />
-        <item index="1" class="java.lang.String" itemvalue="Python.search" />
-        <item index="2" class="java.lang.String" itemvalue="Python.add_texts" />
-        <item index="3" class="java.lang.String" itemvalue="Python.YDLS" />
-        <item index="4" class="java.lang.String" itemvalue="Python.numerise" />
+        <item index="0" class="java.lang.String" itemvalue="Python.add_texts" />
+        <item index="1" class="java.lang.String" itemvalue="Python.localPS" />
+        <item index="2" class="java.lang.String" itemvalue="Python.analyzer" />
+        <item index="3" class="java.lang.String" itemvalue="Python.search" />
+        <item index="4" class="java.lang.String" itemvalue="Python.YDLS" />
       </list>
     </recent_temporary>
   </component>
@@ -564,7 +541,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27123287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20547946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28594506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -638,77 +615,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/input.txt" />
-    <entry file="file://$PROJECT_DIR$/analyzer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47568">
-          <caret line="2973" column="33" selection-start-line="2973" selection-start-column="33" selection-end-line="2973" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_texts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1526069406000" expanded="true" signature="539:591" ph="INSERT INTO texts... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local_stuff.py" />
-    <entry file="file://$PROJECT_DIR$/texts/Архив ВШЭ-ФЭ-69-14-2017-306.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-306-utf-8.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CP1251toUTF8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/numerise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CP1251toUTF8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/numerise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CP1251toUTF8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../poopo.py" />
     <entry file="file://$PROJECT_DIR$/texts/Архив ВШЭ-ФЭ-69-14-2017-1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -776,13 +682,6 @@
     <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-2-UTF8.txt" />
     <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-3-UTF8.txt" />
     <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-4-UTF8.txt" />
-    <entry file="file://$PROJECT_DIR$/texts/Архив ВШЭ-ФЭ-69-14-2017-1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-296-utf-8.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -811,13 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/numerise.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -867,100 +759,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/gramm_filter.html">
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-12-utf-8.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-784">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding>
-            <element signature="e#1542#1548#0" expanded="false" />
-            <element signature="e#1618#1624#0" expanded="false" />
-            <element signature="e#1697#1703#0" expanded="false" />
-            <element signature="e#1776#1782#0" expanded="false" />
-            <element signature="e#1846#1852#0" expanded="false" />
-            <element signature="e#1917#1923#0" expanded="false" />
-            <element signature="e#1997#2003#0" expanded="false" />
-            <element signature="e#2080#2086#0" expanded="false" />
-            <element signature="e#2160#2166#0" expanded="false" />
-            <element signature="e#2235#2241#0" expanded="false" />
-            <element signature="e#2323#2329#0" expanded="false" />
-            <element signature="e#2409#2415#0" expanded="false" />
-            <element signature="e#2427#2433#0" expanded="false" />
-            <element signature="e#2497#2503#0" expanded="false" />
-            <element signature="e#2571#2577#0" expanded="false" />
-            <element signature="e#2642#2648#0" expanded="false" />
-            <element signature="e#2716#2722#0" expanded="false" />
-            <element signature="e#2918#2924#0" expanded="false" />
-            <element signature="e#2995#3001#0" expanded="false" />
-            <element signature="e#3071#3077#0" expanded="false" />
-            <element signature="e#3149#3155#0" expanded="false" />
-            <element signature="e#3227#3233#0" expanded="false" />
-            <element signature="e#3387#3393#0" expanded="false" />
-            <element signature="e#3465#3471#0" expanded="false" />
-            <element signature="e#3544#3550#0" expanded="false" />
-            <element signature="e#3621#3627#0" expanded="false" />
-            <element signature="e#3698#3704#0" expanded="false" />
-            <element signature="e#3714#3720#0" expanded="false" />
-            <element signature="e#3784#3790#0" expanded="false" />
-            <element signature="e#3797#3803#0" expanded="false" />
-            <element signature="e#3930#3936#0" expanded="false" />
-            <element signature="e#3937#3943#0" expanded="false" />
-            <element signature="e#4024#4030#0" expanded="false" />
-            <element signature="e#4107#4113#0" expanded="false" />
-            <element signature="e#4192#4198#0" expanded="false" />
-            <element signature="e#4273#4279#0" expanded="false" />
-            <element signature="e#4354#4360#0" expanded="false" />
-            <element signature="e#4429#4435#0" expanded="false" />
-            <element signature="e#4565#4571#0" expanded="false" />
-            <element signature="e#4572#4578#0" expanded="false" />
-            <element signature="e#4659#4665#0" expanded="false" />
-            <element signature="e#4741#4747#0" expanded="false" />
-            <element signature="e#4823#4829#0" expanded="false" />
-            <element signature="e#4902#4908#0" expanded="false" />
-            <element signature="e#4914#4920#0" expanded="false" />
-            <element signature="e#4986#4992#0" expanded="false" />
-            <element signature="e#4999#5005#0" expanded="false" />
-            <element signature="e#5205#5211#0" expanded="false" />
-            <element signature="e#5279#5285#0" expanded="false" />
-            <element signature="e#5355#5361#0" expanded="false" />
-            <element signature="e#5567#5573#0" expanded="false" />
-            <element signature="e#5646#5652#0" expanded="false" />
-            <element signature="e#5854#5860#0" expanded="false" />
-            <element signature="e#5929#5935#0" expanded="false" />
-            <element signature="e#6131#6137#0" expanded="false" />
-            <element signature="e#6200#6206#0" expanded="false" />
-            <element signature="e#6269#6275#0" expanded="false" />
-            <element signature="e#6560#6566#0" expanded="false" />
-            <element signature="e#6642#6648#0" expanded="false" />
-            <element signature="e#6732#6738#0" expanded="false" />
-            <element signature="e#6916#6922#0" expanded="false" />
-            <element signature="e#6991#6997#0" expanded="false" />
-            <element signature="e#7063#7069#0" expanded="false" />
-            <element signature="e#7145#7151#0" expanded="false" />
-            <element signature="e#7366#7372#0" expanded="false" />
-            <element signature="e#7443#7449#0" expanded="false" />
-            <element signature="e#7516#7522#0" expanded="false" />
-            <element signature="e#7790#7796#0" expanded="false" />
-            <element signature="e#7858#7864#0" expanded="false" />
-            <element signature="e#7926#7932#0" expanded="false" />
-            <element signature="e#7996#8002#0" expanded="false" />
-            <element signature="e#8194#8200#0" expanded="false" />
-            <element signature="e#8275#8281#0" expanded="false" />
-            <element signature="e#8353#8359#0" expanded="false" />
-            <element signature="e#8571#8577#0" expanded="false" />
-            <element signature="e#8650#8656#0" expanded="false" />
-            <element signature="e#8852#8858#0" expanded="false" />
-            <element signature="e#8928#8934#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_texts.py">
+    <entry file="file://$PROJECT_DIR$/analyzer.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="33" />
+        <state relative-caret-position="-138">
+          <caret line="451" column="101" selection-start-line="451" selection-start-column="96" selection-end-line="451" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gramm_filter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1168">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="37" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1526069406000" expanded="true" signature="539:591" ph="INSERT INTO texts... " />
+            <marker date="1526298755000" expanded="true" signature="1355:1400" ph="INSERT INTO words_ver2... " />
           </folding>
         </state>
       </provider>
@@ -973,16 +801,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search.py">
+    <entry file="file://$PROJECT_DIR$/texts/Архив ВШЭ-ФЭ-69-14-2017-1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1526293626000" expanded="true" signature="267:309" ph="SELECT id FR... words" />
-            <marker date="1526293626000" expanded="true" signature="267:310" ph="SELECT * FRO... words" />
-            <marker date="1526293626000" expanded="true" signature="267:340" ph="SELECT id FR... words" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -994,15 +817,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyzer.txt">
+    <entry file="file://$PROJECT_DIR$/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="451" column="101" selection-start-line="451" selection-start-column="96" selection-end-line="451" selection-end-column="101" />
-          <folding />
+        <state relative-caret-position="112">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1526380951000" expanded="true" signature="267:309" ph="SELECT id FR... words" />
+            <marker date="1526380951000" expanded="true" signature="267:310" ph="SELECT * FRO... words" />
+            <marker date="1526380951000" expanded="true" signature="267:340" ph="SELECT id FR... words" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-12-utf-8.txt">
+    <entry file="file://$PROJECT_DIR$/numerise.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1010,12 +838,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyzer.py">
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-509-utf-8.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-573-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-577-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-579-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-580-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-581-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-582-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-583-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-584-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-569-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Архив ВШЭ-ФЭ-69-14-2017-566-utf-8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localPS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1526298755000" expanded="true" signature="1355:1400" ph="INSERT INTO words_ver2... " />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1526381432000" expanded="true" signature="134:400" ph="CREATE TABLE... texts_1" />
+            <marker date="1526381432000" expanded="true" signature="926:951" ph="SELECT gr FR... words_ver2" />
+            <marker date="1526381432000" expanded="true" signature="926:967" ph="SELECT gr FR... words_ver2" />
+            <marker date="1526381432000" expanded="true" signature="926:968" ph="SELECT gr FR... words_ver2" />
+            <marker date="1526381432000" expanded="true" signature="926:969" ph="SELECT id FR... words_ver2" />
+            <marker date="1526381432000" expanded="true" signature="926:990" ph="SELECT id FR... words_ver2" />
+            <marker date="1526381432000" expanded="true" signature="926:1003" ph="SELECT gr FR... words_ver2" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_texts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1526381836000" expanded="true" signature="539:591" ph="INSERT INTO texts... " />
           </folding>
         </state>
       </provider>
