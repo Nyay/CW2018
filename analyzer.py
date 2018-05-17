@@ -35,9 +35,18 @@ def main():
                             except:
                                 qual = 'normal'
                             gr = data[0]['gr']
-                        db.execute('INSERT INTO words_ver2 VALUES (?, ?, ?, ?, ?)',
-                                   (str(word), str(sim), str(lex), str(qual), str(gr)))
-                        db.commit()
+                        if '|' in gr:
+                            items = re.search('(.+?)=\((.+?)\)', gr)
+                            front = items.group(1)
+                            for item in items.group(2).split('|'):
+                                gr = front + ',' + item
+                                db.execute('INSERT INTO words_ver4 VALUES (?, ?, ?, ?, ?)',
+                                           (str(word), str(sim), str(lex), str(qual), str(gr)))
+                                db.commit()
+                        else:
+                            db.execute('INSERT INTO words_ver4 VALUES (?, ?, ?, ?, ?)',
+                                       (str(word), str(sim), str(lex), str(qual), str(gr)))
+                            db.commit()
                         word_num += 1
                 line_num += 1
             print('... TEXT ' + str(i) + ' ANALYSIS COMPLETE...')
