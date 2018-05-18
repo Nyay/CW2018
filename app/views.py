@@ -13,6 +13,7 @@ def index():
 @app.route('/form')
 def form():
     word = request.args['word']
+    word2 = request.args['word2']
     lex = request.args['lex']
     gr = request.args['gr']
     lex_gr = search.lexgram_search(gr, lex)
@@ -21,5 +22,5 @@ def form():
     else:
         print(type(search.search_word(word)))
         ids = []
-
-    return render_template('result.html', ids=ids, ids3=lex_gr, title='Result')
+    something = search.get_lines(search.func_name(search.search_word(word), search.search_word(word2), 1))
+    return render_template('result.html', ids=ids, ids3=lex_gr, something=something, title='Result')

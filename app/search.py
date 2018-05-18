@@ -13,7 +13,10 @@ def get_lines(args):
     for arg in args:
         line_id = '.'.join(arg.split('.')[:2])
         result[arg] = db.execute("SELECT Field2 FROM lines WHERE id ='" + str(line_id) + "'").fetchall()[0][0]
-        result_2.append(db.execute("SELECT Field2 FROM lines WHERE id ='" + str(line_id) + "'").fetchall()[0][0])
+        if result[arg] in result_2:
+            continue
+        else:
+            result_2.append(result[arg])
     return result_2
 
 
@@ -35,6 +38,17 @@ def regexp(expr, item):
     return reg.search(item) is not None
 
 
+def func_name(ids_1, ids_2, num):
+    result = []
+    for el in ids_1:
+        el_list = el.split('.')
+        el_list[2] = str(int(el_list[2]) + num)
+        if '.'.join(el_list) in ids_2:
+            result.append('.'.join(el_list))
+            result.append(el)
+    return result
+
+
 def search_word(arg):
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
     print('...DataBase connected...')
@@ -43,15 +57,12 @@ def search_word(arg):
         return print('...Search returned null result...')
     elif len(result) == 1:
         ids = ast.literal_eval(result[0][0])
-        print(ids)
     else:
         ids = []
         for el in result:
             ids.append(ast.literal_eval(el[0]))
-        print(ids)
     db.close()
-    print(get_lines(ids))
-    return get_lines(set(ids))
+    return set(ids)
 
 
 def lexgram_search(gramms, lex):
