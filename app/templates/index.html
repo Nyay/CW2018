@@ -1,22 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <form action="/form">
-    <ul>
-        <li>
-            <label>Поиск по word: </label>
-            <input type="text" name="word" />
-        </li>
-        <li>
-            <label>Поиск по lexeme: </label>
-            <input type="text" name="lex" />
-        </li>
-		<li>
-            <label>Поиск по gramm: </label>
-            <input type="text" name="gr" />
-        </li>
-        <li>
-            <input type="submit" value="Отправить">
-        </li>
-    </ul>
+    <label>
+		Словоформа<input type="text" name="word" placeholder="Словоформа" size="50%">
+	</label>
+	<br>
+	<label>
+		Лексемма<input type="text" name="lex" placeholder="Лексемма" size="50%">
+	</label>
+	<br>
+	<label>
+		Грамм строка<input type="text" name="gr" placeholder="Грамм строка" size="50%">
+	</label>
+	<br>
+	<input type="submit" value="Отправить">
 </form>
 {% endblock %}

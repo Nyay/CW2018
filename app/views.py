@@ -13,12 +13,21 @@ def index():
 @app.route('/form')
 def form():
     word = request.args['word']
-    print(word)
     lex = request.args['lex']
-    ids = search.search_word(word)
+    gr = request.args['gr']
+    if type(search.search_word(word)) is list:
+        ids = search.search_word(word)
+    else:
+        print(type(search.search_word(word)))
+        ids = []
     print(ids)
-    gr = search.search_gram(request.args['gr'])
-    print(gr)
+    if type(search.search_word(lex)) is list:
+        ids2 = search.search_word(lex)
+    else:
+        ids2 = []
+    if type(search.search_word(gr)) is list:
+        ids3 = search.search_word(gr)
+    else:
+        ids3 = []
     return render_template('result.html', ids=ids,
-                           ids2=search.search_lex(lex),
-                           ids3=gr, title='Result')
+                           ids2=ids2, ids3=ids3, title='Result')

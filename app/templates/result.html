@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Hi!</h1>
-{{ids}}
+{% for el in ids[:100]%}
+{{el}} <br><br>
+{% endfor %}
 <br><br>
-{{ids2}}
+{% for el in ids2[:100]%}
+{{el}} <br><br>
+{% endfor %}
 <br><br>
-{{ids3}}
+{% for el in ids3[:100]%}
+{{el}} <br><br>
+{% endfor %}
 {% endblock %}
