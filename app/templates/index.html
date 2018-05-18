@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="/form">
+    <ul>
+        <li>
+            <label>Поиск по word: </label>
+            <input type="text" name="word" />
+        </li>
+        <li>
+            <label>Поиск по lexeme: </label>
+            <input type="text" name="lex" />
+        </li>
+		<li>
+            <label>Поиск по gramm: </label>
+            <input type="text" name="gr" />
+        </li>
+        <li>
+            <input type="submit" value="Отправить">
+        </li>
+    </ul>
+</form>
+{% endblock %}
