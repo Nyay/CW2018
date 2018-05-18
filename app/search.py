@@ -17,6 +17,19 @@ def get_lines(args):
     return result_2
 
 
+def compile_ids(ids, index_y, index_x):
+    if ids == []:
+        return ids
+    elif len(ids) == 1:
+        result = ast.literal_eval(ids[index_y][index_x])
+    else:
+        result = []
+        for el in ids:
+            for item in ast.literal_eval(el[index_y]):
+                result.append(item)
+    return result
+
+
 def regexp(expr, item):
     reg = re.compile(expr)
     return reg.search(item) is not None
@@ -41,48 +54,36 @@ def search_word(arg):
     return get_lines(set(ids))
 
 
-def search_lex(arg):
-    print(arg)
-    db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
-    print('...DataBase connected...')
-    result = db.execute("SELECT * FROM words_ver3 WHERE lex = " + "'" + str(arg) + "'").fetchall()
-    if result == []:
-        return print('...Search returned null result...')
-    elif len(result) == 1:
-        ids = ast.literal_eval(result[0][1])
-    else:
-        ids = []
-        for el in result:
-            for item in ast.literal_eval(el[1]):
-                ids.append(item)
-        print(ids)
-    db.close()
-    print(get_lines(ids))
-    return get_lines(set(ids))
+def lexgram_search(gramms, lex):
 
-
-def search_gram(args):
-    print(args)
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
-    if args.split(',') == ['']:
-        return []
-    cmd_line = ''
-    for arg in args.split(','):
-        if arg in config.pos:
-            cmd_line = "WHERE gr REGEXP '^" + str(arg) + "(,|=)'" + cmd_line
-        else:
-            cmd_line += " AND gr REGEXP '(,|=)" + str(arg) + "(,|=)?'"
     db.create_function("REGEXP", 2, regexp)
-    result = db.execute("SELECT id FROM words_ver3 " + cmd_line).fetchall()
-    print(result)
-    if result == []:
-        return []
-    elif len(result) == 1:
-        ids = ast.literal_eval(result[0][1])
+
+    if lex != '' and gramms.split(',') != ['']:
+        cmd_line = ''
+        for gramm in gramms.split(','):
+            if gramm in config.pos:
+                cmd_line = "WHERE gr REGEXP '^" + str(gramm) + "(,|=)'" + cmd_line
+            else:
+                cmd_line += " AND gr REGEXP '(,|=)" + str(gramm) + "(,|=)?'"
+        cmd_line += " AND lex = '" + str(lex) + "'"
+        result = db.execute("SELECT id FROM words_ver3 " + cmd_line).fetchall()
+        db.close()
+        return get_lines(compile_ids(result, 0, 1))
+    elif lex == '' and gramms.split(',') != ['']:
+        cmd_line = ''
+        for gramm in gramms.split(','):
+            if gramm in config.pos:
+                cmd_line = "WHERE gr REGEXP '^" + str(gramm) + "(,|=)'" + cmd_line
+            else:
+                cmd_line += " AND gr REGEXP '(,|=)" + str(gramm) + "(,|=)?'"
+        result = db.execute("SELECT id FROM words_ver3 " + cmd_line).fetchall()
+        db.close()
+        return get_lines(compile_ids(result, 0, 1))
+    elif lex != '' and gramms.split(',') == ['']:
+        result = db.execute("SELECT id FROM words_ver3 WHERE lex = " + "'" + str(lex) + "'").fetchall()
+        return get_lines(compile_ids(result, 0, 1))
     else:
-        ids = []
-        for el in result:
-            for item in ast.literal_eval(el[0]):
-                ids.append(item)
-    db.close()
-    return get_lines(ids)
+        return []
+
+
