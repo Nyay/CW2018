@@ -20,14 +20,16 @@ def form():
     else:
         print(type(search.search_word(word)))
         ids = []
-    print(ids)
-    if type(search.search_word(lex)) is list:
-        ids2 = search.search_word(lex)
+    if type(search.search_lex(lex)) is list:
+        ids2 = search.search_lex(lex)
     else:
+        print(type(search.search_lex(lex)))
         ids2 = []
-    if type(search.search_word(gr)) is list:
-        ids3 = search.search_word(gr)
+    if type(search.search_gram(gr)) is list:
+        ids3 = search.search_gram(gr)
     else:
+        print(type(search.search_gram(gr)))
         ids3 = []
+    print(ids3)
     return render_template('result.html', ids=ids,
                            ids2=ids2, ids3=ids3, title='Result')

@@ -1,14 +1,45 @@
 <html>
   <head>
-    {% if title %}
-    <title>{{title}}</title>
-    {% else %}
-    <title>Title here</title>
-    {% endif %}
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-  <body>
-    <div>Microblog: <a href="/index">Home</a></div>
-    <hr>
+
+  <style>
+    .jumbotron {
+      background-color: #757ee4; /* Orange */
+      color: #ffffff;
+      font-family: Montserrat, sans-serif;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #757ee4;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #757ee4 !important;
+    background-color: #fff !important;
+}
+
+    .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+</style>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div class="jumbotron text-center">
+      <h1>Фольклорный корпус</h1>
+    </div>
     {% block content %}{% endblock %}
   </body>
 </html>

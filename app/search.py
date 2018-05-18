@@ -5,6 +5,7 @@ from app import config
 
 
 def get_lines(args):
+    print('LINES HERE')
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
     print('...Lines connected...')
     result = {}
@@ -14,7 +15,6 @@ def get_lines(args):
         result[arg] = db.execute("SELECT Field2 FROM lines WHERE id ='" + str(line_id) + "'").fetchall()[0][0]
         result_2.append(db.execute("SELECT Field2 FROM lines WHERE id ='" + str(line_id) + "'").fetchall()[0][0])
     return result_2
-
 
 
 def regexp(expr, item):
@@ -60,10 +60,12 @@ def search_lex(arg):
     print(get_lines(ids))
     return get_lines(set(ids))
 
+
 def search_gram(args):
+    print(args)
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
     if args.split(',') == ['']:
-        return print('... NOTHING FOUND ...')
+        return []
     cmd_line = ''
     for arg in args.split(','):
         if arg in config.pos:
@@ -72,8 +74,9 @@ def search_gram(args):
             cmd_line += " AND gr REGEXP '(,|=)" + str(arg) + "(,|=)?'"
     db.create_function("REGEXP", 2, regexp)
     result = db.execute("SELECT id FROM words_ver3 " + cmd_line).fetchall()
+    print(result)
     if result == []:
-        return print('...Search returned null result...')
+        return []
     elif len(result) == 1:
         ids = ast.literal_eval(result[0][1])
     else:
@@ -82,4 +85,4 @@ def search_gram(args):
             for item in ast.literal_eval(el[0]):
                 ids.append(item)
     db.close()
-    return get_lines(set(ids))
+    return get_lines(ids)

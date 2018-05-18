@@ -1,18 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#search">ПОИСК</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <form action="/form">
-    <label>
-		Словоформа<input type="text" name="word" placeholder="Словоформа" size="50%">
-	</label>
-	<br>
-	<label>
-		Лексемма<input type="text" name="lex" placeholder="Лексемма" size="50%">
-	</label>
-	<br>
-	<label>
-		Грамм строка<input type="text" name="gr" placeholder="Грамм строка" size="50%">
-	</label>
-	<br>
-	<input type="submit" value="Отправить">
-</form>
+		<div id="search" class="container">
+		  <div class="row">
+			<div class="col-sm-4">
+			  <div class="form-group">
+			  <label for="word">Поиск по словоформе</label>
+			  <input type="text" class="form-control" id="word" placeholder="Введите словоформу" name="word">
+			</div>
+			</div>
+			<div class="col-sm-3">
+			  <div class="form-group">
+			  <label for="lex">Поиск по лексеме</label>
+			  <input type="text" class="form-control" id="lex" placeholder="Введите лексему" name="lex">
+			</div>
+			</div>
+			<div class="col-sm-5">
+			  <div class="form-group">
+			  <label for="gr">Поиск по грамм. признакам</label>
+			  <input type="text" class="form-control" id="gr" placeholder="Введите грамматические признаки" name="gr">
+			</div>
+			</div>
+		  </div>
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
 {% endblock %}
