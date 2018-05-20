@@ -17,7 +17,7 @@ def form():
     print(lex)
     gr = [request.args['gr1'], request.args['gr2']]
     print(gr)
-    num = [request.args['num1'], request.args['num2']]
+    num = request.args['num']
     print(num)
     if word != '':
         print('DONE')
@@ -28,6 +28,6 @@ def form():
             output = search.get_lines(search.lexgram_search(gr[0], lex[0]))
             return render_template('result.html', result=output, word_flag=True)
         else:
-            output = search.get_lines(search.func_name(search.lexgram_search(gr[0], lex[0]), search.lexgram_search(gr[1], lex[1]), 1))
+            output = search.get_lines(search.func_name(search.lexgram_search(gr[0], lex[0]), search.lexgram_search(gr[1], lex[1]), int(num)))
             return render_template('result.html', result=output, word_flag=True)
 
