@@ -1,16 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-{% for el in ids[:100]%}
-{{el}} <br><br>
-{% endfor %}
-<br><br>
-{% for el in ids3[:100]%}
-{{el}} <br><br>
-{% endfor %}
 
-<br><br>
-{% for el in something[:100]%}
-{{el}} <br><br>
+{% if word_flag %}
+{% for el in result[:100]%}
+<br>
+{{el}}
+<br>
 {% endfor %}
+{% endif %}
 
 {% endblock %}

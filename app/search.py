@@ -5,9 +5,7 @@ from app import config
 
 
 def get_lines(args):
-    print('LINES HERE')
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
-    print('...Lines connected...')
     result = {}
     result_2 = []
     for arg in args:
@@ -74,26 +72,30 @@ def lexgram_search(gramms, lex):
         cmd_line = ''
         for gramm in gramms.split(','):
             if gramm in config.pos:
-                cmd_line = "WHERE gr REGEXP '^" + str(gramm) + "(,|=)'" + cmd_line
+                cmd_line = " gr REGEXP '^" + str(gramm) + "(,|=)'" + cmd_line
             else:
                 cmd_line += " AND gr REGEXP '(,|=)" + str(gramm) + "(,|=)?'"
         cmd_line += " AND lex = '" + str(lex) + "'"
-        result = db.execute("SELECT id FROM words_ver3 " + cmd_line).fetchall()
+        if cmd_line.startswith(' AND ') is True:
+            cmd_line = cmd_line.strip(' AND ')
+        result = db.execute("SELECT id FROM words_ver3 WHERE " + cmd_line).fetchall()
         db.close()
-        return get_lines(compile_ids(result, 0, 1))
+        return compile_ids(result, 0, 1)
     elif lex == '' and gramms.split(',') != ['']:
         cmd_line = ''
         for gramm in gramms.split(','):
             if gramm in config.pos:
-                cmd_line = "WHERE gr REGEXP '^" + str(gramm) + "(,|=)'" + cmd_line
+                cmd_line = " gr REGEXP '^" + str(gramm) + "(,|=)'" + cmd_line
             else:
                 cmd_line += " AND gr REGEXP '(,|=)" + str(gramm) + "(,|=)?'"
-        result = db.execute("SELECT id FROM words_ver3 " + cmd_line).fetchall()
+        if cmd_line.startswith(' AND ') is True:
+            cmd_line = cmd_line.strip(' AND ')
+        result = db.execute("SELECT id FROM words_ver3 WHERE " + cmd_line).fetchall()
         db.close()
-        return get_lines(compile_ids(result, 0, 1))
+        return compile_ids(result, 0, 1)
     elif lex != '' and gramms.split(',') == ['']:
         result = db.execute("SELECT id FROM words_ver3 WHERE lex = " + "'" + str(lex) + "'").fetchall()
-        return get_lines(compile_ids(result, 0, 1))
+        return compile_ids(result, 0, 1)
     else:
         return []
 

@@ -13,14 +13,21 @@ def index():
 @app.route('/form')
 def form():
     word = request.args['word']
-    word2 = request.args['word2']
-    lex = request.args['lex']
-    gr = request.args['gr']
-    lex_gr = search.lexgram_search(gr, lex)
-    if type(search.search_word(word)) is list:
-        ids = search.search_word(word)
-    else:
-        print(type(search.search_word(word)))
-        ids = []
-    something = search.get_lines(search.func_name(search.search_word(word), search.search_word(word2), 1))
-    return render_template('result.html', ids=ids, ids3=lex_gr, something=something, title='Result')
+    lex = [request.args['lex1'], request.args['lex2']]
+    print(lex)
+    gr = [request.args['gr1'], request.args['gr2']]
+    print(gr)
+    num = [request.args['num1'], request.args['num2']]
+    print(num)
+    if word != '':
+        print('DONE')
+        output = search.get_lines(search.search_word(word))
+        return render_template('result.html', result=output, word_flag=True)
+    elif len(lex) != 0 or len(gr) != 0:
+        if lex[1] == '' and gr[1] == '':
+            output = search.get_lines(search.lexgram_search(gr[0], lex[0]))
+            return render_template('result.html', result=output, word_flag=True)
+        else:
+            output = search.get_lines(search.func_name(search.lexgram_search(gr[0], lex[0]), search.lexgram_search(gr[1], lex[1]), 1))
+            return render_template('result.html', result=output, word_flag=True)
+
