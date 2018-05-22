@@ -1,31 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="jumbotron text-center">
+  <p>Поиск по точной словоформе</p>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Введите словоформу" name="word">
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Найти</button>
+      </div>
+    </div>
+</div>
+<form action="/form_word">
+		<div id="word" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+  	<h1>Поиск по точной словоформе</h1>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Введите словоформу" name="word">
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Найти</button>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-text-width"></span>
+    </div>
+  </div>
+</div>
+	</form>
 <form action="/form">
-		<div id="search" class="container">
+		<div id="lex" class="container-fluid  bg-grey">
+  <div class="row">
+	  <div class="col-sm-3">
+      <span class="glyphicon glyphicon-text-height"></span>
+    </div>
+    <div class="col-sm-9">
+		<h1>Лексико-грамматический поиск</h1>
+  	<div class="container">
 		  <div class="row">
-			<div class="col-sm-4">
-			  <div class="form-group">
-			  <label for="word">Поиск по словоформе</label>
-				  <input type="text" class="form-control" id="word" placeholder="Введите словоформу" name="word">
-			</div>
-			</div>
 			<div class="col-sm-3">
 			  <div class="form-group">
-			  <label for="lex">Поиск по лексеме</label>
 			  <input type="text" class="form-control" id="lex" placeholder="Введите лексему" name="lex1">
+				  <br>
                  <input type="text" class="form-control" id="lex" placeholder="Введите лексему" name="lex2">
 			</div>
                  <input type="number" class="form-control" id="lex" placeholder="Введите лексему" name="num" min="0" value="1">
 			</div>
 			<div class="col-sm-5">
 			  <div class="form-group">
-			  <label for="gr">Поиск по грамм. признакам</label>
-			  <input type="text" class="form-control" id="gr" placeholder="Введите грамматические признаки" name="gr1">
-                  <input type="text" class="form-control" id="gr" placeholder="Введите грамматические признаки" name="gr2">
-			</div>
+			  <input type="text" class="form-control" placeholder="Введите грамматические признаки" name="gr1">
+				  <br>
+                  <input type="text" class="form-control" placeholder="Введите грамматические признаки" name="gr2">
+				  </div>
+				<p>Задайте расстояние между словами</p>
+				  <button type="submit" class="btn btn-default">Submit</button>
 			</div>
 		  </div>
 		</div>
-		<button type="submit" class="btn btn-default">Submit</button>
+    </div>
+    </div>
+  </div>
+</div>
 	</form>
 {% endblock %}
