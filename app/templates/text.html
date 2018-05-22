@@ -5,17 +5,17 @@
     {% autoescape false %}
 <br>
 <p>Текст:<br>{{el[1]}}<br></p>
+    <button class="btn btn-danger" data-toggle="collapse" data-target="#demo">Открыть информацию по тексту</button>
+    <div id="demo" class="collapse">
     <p>Жанр:<br>{{el[2]}}<br></p>
-<div class="dropdown-menu">
-  <span class="dropdown-item-text" href="#">Just Text</span>
-</div>
     <p>Респондент:<br>{{el[4]}}<br></p>
     <p>Год рождения респондента:<br>{{el[5]}}<br></p>
     <p>Место рождения респондента:<br>{{el[6]}}<br></p>
     <p>Корреспондент:<br>{{el[7]}}<br></p>
     <p>Место записи:<br>{{el[8]}}<br></p>
-<br>
+</div>
     {% endautoescape %}
 {% endfor %}
+
 </div>
 {% endblock %}

@@ -37,5 +37,5 @@ def text():
 def form_word():
     word = request.args['word']
     if word != '':
-        output = setup.setup_line(search.get_lines_2(search.search_word(word)))
+        output = setup.setup_line(search.get_lines_2(search.search_word(word.lower())))
         return render_template('result.html', result=output, word_flag=True)
