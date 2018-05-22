@@ -18,10 +18,10 @@ def form():
     num = request.args['num']
     if len(lex) != 0 or len(gr) != 0:
         if lex[1] == '' and gr[1] == '':
-            output2 = setup.setup_line(search.get_lines_2(search.lexgram_search(gr[0], lex[0])))
+            output2 = setup.setup_line(search.get_lines_2(search.lexgram_search(gr[0], lex[0].lower())))
             return render_template('result.html', result=output2, word_flag=True)
         else:
-            output2 = setup.setup_line(search.get_lines_2(search.func_name(search.lexgram_search(gr[0], lex[0]),
+            output2 = setup.setup_line(search.get_lines_2(search.func_name(search.lexgram_search(gr[0], lex[0].lower()),
                                                        search.lexgram_search(gr[1], lex[1]), int(num))))
             return render_template('result.html', result=output2, word_flag=True)
 
