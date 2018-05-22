@@ -115,5 +115,6 @@ def lexgram_search(gramms, lex):
 
 def get_text(arg):
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
-    data = db.execute("SELECT * FROM texts WHERE id ='" + str(arg) + "'")
-    return data
+    data = [db.execute("SELECT * FROM texts WHERE id ='" + str(arg) + "'").fetchall()[0]]
+    num = config.locations[data[0][8]]
+    return [data, num]

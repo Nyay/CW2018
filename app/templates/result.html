@@ -9,7 +9,6 @@
 
     </div>
     </div>
-{% if word_flag %}
 {% for el in result%}
         {% autoescape false %}
     <form action="/text">
@@ -21,12 +20,11 @@
       <p>{{el}}</p><br>
     </div>
     <div class="col-sm-2">
-            <button type="submit" value={{result[el]}} name="text">Просмотр текста</button>
+            <button class="btn btn-danger" type="submit" value={{result[el]}} name="text">Просмотр текста</button>
     </div>
   </div>
 </div>
 {% endautoescape %}
     {% endfor %}
-{% endif %}
     </form>
 {% endblock %}

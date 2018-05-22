@@ -14,9 +14,5 @@ def setup_line(arg):
                 num = item.split('.')[0]
             output[text_out] = num
         except IndexError:
-            for item in set(arg[line]):
-                text[int(item.split('.')[2]) - 2] = "<b>" + str(text[int(item.split('.')[2]) - 2]) + str("</b>")
-                text_out = ' '.join(text)
-                num = item.split('.')[0]
-            output[text_out] = num
+            continue
     return output

@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div class="well">
+    <div class="container-fluid">
+    <div class="col-sm-1">
+          </div>
+    <div class="col-sm-9">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    </div>
+
 {% for el in result%}
     {% autoescape false %}
 <br>
@@ -13,9 +23,51 @@
     <p>Место рождения респондента:<br>{{el[6]}}<br></p>
     <p>Корреспондент:<br>{{el[7]}}<br></p>
     <p>Место записи:<br>{{el[8]}}<br></p>
+    <div id="map" style="width: 800px; height: 400px"></div>
+   <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark,
+                coord;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+
+
+            myPlacemark = new ymaps.Placemark([{{coord}}], {
+                hintContent: 'Москва!',
+                balloonContent: 'Столица России'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
 </div>
     {% endautoescape %}
 {% endfor %}
 
 </div>
 {% endblock %}
+
+{{ pagination.info }}
+{{ pagination.links }}
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      <tr>
+        <td>{{ user }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{{ pagination.links }}
