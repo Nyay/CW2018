@@ -6,8 +6,9 @@ mystem = Mystem()
 
 
 def main():
-    db = sqlite3.connect('CW2018.db')
+    db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
     print('...DataBase connected...')
+    output = {}
     for i in range(1, 585):
         try:
             line_num = 1
@@ -22,36 +23,41 @@ def main():
                 for el in data:
                     if 'analysis' in el:
                         sim = (str(text_num) + '.' + str(line_num) + '.' + str(word_num))
-                        word = el['text']
+                        word = el['text'].lower()
                         data = el['analysis']
                         if data == []:
                             lex = '-'
-                            qual = '-'
                             gr = '-'
                         else:
                             lex = data[0]['lex']
-                            try:
-                                qual = data[0]['qual']
-                            except:
-                                qual = 'normal'
                             gr = data[0]['gr']
                         if '|' in gr:
                             items = re.search('(.+?)=\((.+?)\)', gr)
                             front = items.group(1)
                             for item in items.group(2).split('|'):
                                 gr = front + ',' + item
-                                db.execute('INSERT INTO words_ver4 VALUES (?, ?, ?, ?, ?)',
-                                           (str(word), str(sim), str(lex), str(qual), str(gr)))
-                                db.commit()
+                                token = str(word) + str(gr)
+                                if token in output:
+                                    output[token][1].append(str(sim))
+                                else:
+                                    output[token] = [str(word), [str(sim)], str(lex), str(gr)]
                         else:
-                            db.execute('INSERT INTO words_ver4 VALUES (?, ?, ?, ?, ?)',
-                                       (str(word), str(sim), str(lex), str(qual), str(gr)))
-                            db.commit()
+                            token = str(word) + str(gr)
+                            if token in output:
+                                output[token][1].append(str(sim))
+                            else:
+                                output[token] = [str(word), [str(sim)], str(lex), str(gr)]
                         word_num += 1
                 line_num += 1
             print('... TEXT ' + str(i) + ' ANALYSIS COMPLETE...')
         except FileNotFoundError:
             continue
+    print(output)
+    for el in output:
+        print(str(output[el][0]))
+        db.execute('INSERT INTO words_ver6 VALUES (?, ?, ?, ?)', (str(output[el][0]), str(output[el][1]),
+                                                                 str(output[el][2]), str(output[el][3])))
+        db.commit()
     db.close()
     print('...DataBase closed...')
 

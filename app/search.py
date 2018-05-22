@@ -4,13 +4,27 @@ import ast
 from app import config
 
 
+def get_lines_2(args):
+    db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
+    db.create_function("REGEXP", 2, regexp)
+    result = {}
+    for arg in args:
+        line_id = '.'.join(arg.split('.')[:2])
+        line = db.execute("SELECT Field2 FROM lines WHERE id ='" + str(line_id) + "'").fetchall()[0][0]
+        if line in result:
+            result[line].append(arg)
+        else:
+            result[line] = [arg]
+    return result
+
+
 def get_lines(args):
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
     result = {}
     result_2 = []
     for arg in args:
         line_id = '.'.join(arg.split('.')[:2])
-        result[arg] = db.execute("SELECT Field2 FROM lines WHERE id ='" + str(line_id) + "'").fetchall()[0][0]
+        result[arg] = db.execute("SELECT Field2 FROM lines2 WHERE id ='" + str(line_id) + "'").fetchall()[0][0]
         if result[arg] in result_2:
             continue
         else:
@@ -49,10 +63,9 @@ def func_name(ids_1, ids_2, num):
 
 def search_word(arg):
     db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
-    print('...DataBase connected...')
     result = db.execute("SELECT ids FROM words_ids WHERE word = " + "'" + str(arg) + "'").fetchall()
     if result == []:
-        return print('...Search returned null result...')
+        return []
     elif len(result) == 1:
         ids = ast.literal_eval(result[0][0])
     else:
@@ -60,7 +73,7 @@ def search_word(arg):
         for el in result:
             ids.append(ast.literal_eval(el[0]))
     db.close()
-    return set(ids)
+    return ids
 
 
 def lexgram_search(gramms, lex):
@@ -78,7 +91,7 @@ def lexgram_search(gramms, lex):
         cmd_line += " AND lex = '" + str(lex) + "'"
         if cmd_line.startswith(' AND ') is True:
             cmd_line = cmd_line.strip(' AND ')
-        result = db.execute("SELECT id FROM words_ver3 WHERE " + cmd_line).fetchall()
+        result = db.execute("SELECT id FROM words_ver6 WHERE " + cmd_line).fetchall()
         db.close()
         return compile_ids(result, 0, 1)
     elif lex == '' and gramms.split(',') != ['']:
@@ -90,13 +103,17 @@ def lexgram_search(gramms, lex):
                 cmd_line += " AND gr REGEXP '(,|=)" + str(gramm) + "(,|=)?'"
         if cmd_line.startswith(' AND ') is True:
             cmd_line = cmd_line.strip(' AND ')
-        result = db.execute("SELECT id FROM words_ver3 WHERE " + cmd_line).fetchall()
+        result = db.execute("SELECT id FROM words_ver6 WHERE " + cmd_line).fetchall()
         db.close()
         return compile_ids(result, 0, 1)
     elif lex != '' and gramms.split(',') == ['']:
-        result = db.execute("SELECT id FROM words_ver3 WHERE lex = " + "'" + str(lex) + "'").fetchall()
+        result = db.execute("SELECT id FROM words_ver6 WHERE lex = " + "'" + str(lex) + "'").fetchall()
         return compile_ids(result, 0, 1)
     else:
         return []
 
 
+def get_text(arg):
+    db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
+    data = db.execute("SELECT * FROM texts WHERE id ='" + str(arg) + "'")
+    return data

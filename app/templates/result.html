@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-
+<div class="well">
+    <form action="/text">
 {% if word_flag %}
-{% for el in result[:100]%}
+{% for el in result%}
+        {% autoescape false %}
 <br>
-{{el}}
+<p>{{el}}<br>
 <br>
-{% endfor %}
+    <button type="submit" value={{result[el]}} name="text">Просмотр текста</button>
+{% endautoescape %}
+    {% endfor %}
 {% endif %}
-
+    </form>
+</div>
 {% endblock %}

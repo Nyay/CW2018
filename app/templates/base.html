@@ -14,32 +14,46 @@
       background-color: #757ee4;
       z-index: 9999;
       border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
+      font-size: 12px;
+      line-height: 1.42857143;
       letter-spacing: 4px;
       border-radius: 0;
       font-family: Montserrat, sans-serif;
     }
 
     .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    color: #fff;
 }
 
     .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #757ee4 !important;
-    background-color: #fff !important;
+    color: #757ee4;
+    background-color: #fff;
 }
 
     .navbar-default .navbar-toggle {
     border-color: transparent;
-    color: #fff !important;
+    color: #fff;
 }
 </style>
 
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <div class="jumbotron text-center">
-      <h1>Фольклорный корпус</h1>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">ПОИСК</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
     {% block content %}{% endblock %}
   </body>
 </html>
