@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d28b725d-fd22-46df-a928-5e260c5b06cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config.py" afterPath="$PROJECT_DIR$/app/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/search.py" afterPath="$PROJECT_DIR$/app/search.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/base.html" afterPath="$PROJECT_DIR$/app/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/text.html" afterPath="$PROJECT_DIR$/app/templates/text.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/result.html" afterPath="$PROJECT_DIR$/app/templates/result.html" />
     </list>
     <ignored path="CW2018.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +35,7 @@
     <SUITE FILE_PATH="coverage/CW2018$search.coverage" NAME="search Coverage Results" MODIFIED="1526642520871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/CW2018$add_lines.coverage" NAME="add_lines Coverage Results" MODIFIED="1526975782346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CW2018$YDLS.coverage" NAME="YDLS Coverage Results" MODIFIED="1525894808062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CW2018$run.coverage" NAME="run Coverage Results" MODIFIED="1527081837995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/CW2018$run.coverage" NAME="run Coverage Results" MODIFIED="1527085495070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -63,7 +59,7 @@
       <file leaf-file-name="text.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
+            <state relative-caret-position="256">
               <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -72,21 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config.py">
+      <file leaf-file-name="result.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            <state relative-caret-position="121">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+            <state relative-caret-position="449">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <element signature="e#88#512#0" expanded="false" />
@@ -96,20 +92,29 @@
                 <element signature="e#1405#1649#0" expanded="false" />
                 <element signature="e#1678#2084#0" expanded="false" />
                 <element signature="e#2125#3632#0" expanded="false" />
-                <element signature="e#3658#3927#0" expanded="false" />
-                <marker date="1527082005000" expanded="true" signature="307:364" ph="SELECT Field... lines" />
-                <marker date="1527082005000" expanded="true" signature="740:798" ph="SELECT Field... lines" />
-                <marker date="1527082005000" expanded="true" signature="1767:1829" ph="SELECT ids F... words_ids" />
-                <marker date="1527082005000" expanded="true" signature="2730:2756" ph="SELECT id FR... words_ver3" />
-                <marker date="1527082005000" expanded="true" signature="2730:2762" ph="SELECT id FR... words_ver3" />
-                <marker date="1527082005000" expanded="true" signature="3293:3319" ph="SELECT id FR... words_ver3" />
-                <marker date="1527082005000" expanded="true" signature="3293:3325" ph="SELECT id FR... words_ver3" />
-                <marker date="1527082005000" expanded="true" signature="3489:3550" ph="SELECT id FR... words_ver3" />
-                <marker date="1527082005000" expanded="true" signature="3746:3776" ph="SELECT * FRO... texts_1" />
-                <marker date="1527082005000" expanded="true" signature="3746:3777" ph="SELECT * FRO... texts_1" />
-                <marker date="1527082005000" expanded="true" signature="3746:3789" ph="SELECT * FRO... texts_1" />
-                <marker date="1527082005000" expanded="true" signature="3746:3794" ph="SELECT * FRO... texts" />
+                <marker date="1527085491000" expanded="true" signature="307:364" ph="SELECT Field... lines" />
+                <marker date="1527085491000" expanded="true" signature="740:798" ph="SELECT Field... lines" />
+                <marker date="1527085491000" expanded="true" signature="1767:1829" ph="SELECT ids F... words_ids" />
+                <marker date="1527085491000" expanded="true" signature="2730:2756" ph="SELECT id FR... words_ver3" />
+                <marker date="1527085491000" expanded="true" signature="2730:2762" ph="SELECT id FR... words_ver3" />
+                <marker date="1527085491000" expanded="true" signature="3293:3319" ph="SELECT id FR... words_ver3" />
+                <marker date="1527085491000" expanded="true" signature="3293:3325" ph="SELECT id FR... words_ver3" />
+                <marker date="1527085491000" expanded="true" signature="3489:3550" ph="SELECT id FR... words_ver3" />
+                <marker date="1527085491000" expanded="true" signature="3746:3776" ph="SELECT * FRO... texts_1" />
+                <marker date="1527085491000" expanded="true" signature="3746:3777" ph="SELECT * FRO... texts_1" />
+                <marker date="1527085491000" expanded="true" signature="3746:3789" ph="SELECT * FRO... texts_1" />
+                <marker date="1527085491000" expanded="true" signature="3746:3794" ph="SELECT * FRO... texts" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,7 +122,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
+            <state relative-caret-position="465">
               <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -169,13 +174,13 @@
         <option value="$PROJECT_DIR$/add_table.py" />
         <option value="$PROJECT_DIR$/analyzer.py" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
-        <option value="$PROJECT_DIR$/app/setup.py" />
-        <option value="$PROJECT_DIR$/app/templates/result.html" />
         <option value="$PROJECT_DIR$/app/templates/base.html" />
         <option value="$PROJECT_DIR$/app/config.py" />
-        <option value="$PROJECT_DIR$/app/search.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/templates/text.html" />
+        <option value="$PROJECT_DIR$/app/setup.py" />
+        <option value="$PROJECT_DIR$/app/search.py" />
+        <option value="$PROJECT_DIR$/app/templates/result.html" />
       </list>
     </option>
   </component>
@@ -831,18 +836,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
           <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -855,17 +860,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
+        <state relative-caret-position="465">
           <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
@@ -873,9 +870,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/text.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
+        <state relative-caret-position="256">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -883,18 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+        <state relative-caret-position="449">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <element signature="e#88#512#0" expanded="false" />
@@ -904,20 +901,27 @@
             <element signature="e#1405#1649#0" expanded="false" />
             <element signature="e#1678#2084#0" expanded="false" />
             <element signature="e#2125#3632#0" expanded="false" />
-            <element signature="e#3658#3927#0" expanded="false" />
-            <marker date="1527082005000" expanded="true" signature="307:364" ph="SELECT Field... lines" />
-            <marker date="1527082005000" expanded="true" signature="740:798" ph="SELECT Field... lines" />
-            <marker date="1527082005000" expanded="true" signature="1767:1829" ph="SELECT ids F... words_ids" />
-            <marker date="1527082005000" expanded="true" signature="2730:2756" ph="SELECT id FR... words_ver3" />
-            <marker date="1527082005000" expanded="true" signature="2730:2762" ph="SELECT id FR... words_ver3" />
-            <marker date="1527082005000" expanded="true" signature="3293:3319" ph="SELECT id FR... words_ver3" />
-            <marker date="1527082005000" expanded="true" signature="3293:3325" ph="SELECT id FR... words_ver3" />
-            <marker date="1527082005000" expanded="true" signature="3489:3550" ph="SELECT id FR... words_ver3" />
-            <marker date="1527082005000" expanded="true" signature="3746:3776" ph="SELECT * FRO... texts_1" />
-            <marker date="1527082005000" expanded="true" signature="3746:3777" ph="SELECT * FRO... texts_1" />
-            <marker date="1527082005000" expanded="true" signature="3746:3789" ph="SELECT * FRO... texts_1" />
-            <marker date="1527082005000" expanded="true" signature="3746:3794" ph="SELECT * FRO... texts" />
+            <marker date="1527085491000" expanded="true" signature="307:364" ph="SELECT Field... lines" />
+            <marker date="1527085491000" expanded="true" signature="740:798" ph="SELECT Field... lines" />
+            <marker date="1527085491000" expanded="true" signature="1767:1829" ph="SELECT ids F... words_ids" />
+            <marker date="1527085491000" expanded="true" signature="2730:2756" ph="SELECT id FR... words_ver3" />
+            <marker date="1527085491000" expanded="true" signature="2730:2762" ph="SELECT id FR... words_ver3" />
+            <marker date="1527085491000" expanded="true" signature="3293:3319" ph="SELECT id FR... words_ver3" />
+            <marker date="1527085491000" expanded="true" signature="3293:3325" ph="SELECT id FR... words_ver3" />
+            <marker date="1527085491000" expanded="true" signature="3489:3550" ph="SELECT id FR... words_ver3" />
+            <marker date="1527085491000" expanded="true" signature="3746:3776" ph="SELECT * FRO... texts_1" />
+            <marker date="1527085491000" expanded="true" signature="3746:3777" ph="SELECT * FRO... texts_1" />
+            <marker date="1527085491000" expanded="true" signature="3746:3789" ph="SELECT * FRO... texts_1" />
+            <marker date="1527085491000" expanded="true" signature="3746:3794" ph="SELECT * FRO... texts" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
