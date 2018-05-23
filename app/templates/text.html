@@ -14,7 +14,7 @@
 {% for el in result%}
     {% autoescape false %}
 <br>
-<p>Текст:<br>{{el[1]}}<br></p>
+<p>Текст:<br>{{ text }}<br></p>
     <button class="btn btn-danger" data-toggle="collapse" data-target="#demo">Открыть информацию по тексту</button>
     <div id="demo" class="collapse">
     <p>Жанр:<br>{{el[2]}}<br></p>
@@ -32,14 +32,14 @@
 
         function init(){
             myMap = new ymaps.Map("map", {
-                center: [55.76, 37.64],
-                zoom: 7
+                center: [{{coord}}],
+                zoom: 15
             });
 
 
             myPlacemark = new ymaps.Placemark([{{coord}}], {
                 hintContent: 'Москва!',
-                balloonContent: 'Столица России'
+                balloonContent: '{{el[8]}}'
             });
 
             myMap.geoObjects.add(myPlacemark);
