@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="well">
     <div class="container-fluid">
     <div class="col-sm-1">
           </div>
@@ -10,32 +9,24 @@
     <div class="col-sm-2">
     </div>
     </div>
-
-{% for el in result%}
+    <div class="container-fluid">
+        <div class="col-sm-9">
+            {% for el in result%}
     {% autoescape false %}
-<br>
-<p>Текст:<br>{{ text }}<br></p>
-    <button class="btn btn-danger" data-toggle="collapse" data-target="#demo">Открыть информацию по тексту</button>
-    <div id="demo" class="collapse">
-    <p>Жанр:<br>{{el[2]}}<br></p>
-    <p>Респондент:<br>{{el[4]}}<br></p>
-    <p>Год рождения респондента:<br>{{el[5]}}<br></p>
-    <p>Место рождения респондента:<br>{{el[6]}}<br></p>
-    <p>Корреспондент:<br>{{el[7]}}<br></p>
-    <p>Место записи:<br>{{el[8]}}<br></p>
-            <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal">Показать всплывающее окно</button>
-<div id="myModal" class="modal fade">
+{{ text }}<br></p>
+            </div>
+        <div class="col-sm-2">
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Открыть информацию по тексту</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Открыть карту</button>
+                <div id="myModal2" class="modal fade">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
-<h4 class="modal-title">Заголовок окна</h4>
+<h1 class="modal-title">Место записи</h1>
 </div>
-<div class="modal-body">Текст уведомления</div>
-<div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
-</div>
-</div>
-</div>
-    <div id="map" style="width: 800px; height: 400px"></div>
+<div class="modal-body">
+        <div id="map" style="width: 570px; height: 400px"></div>
    <script type="text/javascript">
         ymaps.ready(init);
         var myMap,
@@ -58,28 +49,33 @@
         }
     </script>
 </div>
+<div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
+</div>
+</div>
+</div>
+                <div id="myModal" class="modal fade">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
+<h4 class="modal-title">Заголовок окна</h4>
+</div>
+<div class="modal-body">
+    <p><b>Жанр:</b><br>{{el[2]}}<br></p>
+    <p><b>Респондент:</b><br>{{el[4]}}<br></p>
+    <p><b>Год рождения респондента:</b><br>{{el[5]}}<br></p>
+    <p><b>Место рождения респондента:</b><br>{{el[6]}}<br></p>
+    <p><b>Корреспондент:</b><br>{{el[7]}}<br></p>
+    <p><b>Место записи:</b><br>{{el[8]}}<br></p>
+</div>
+<div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
+</div>
+</div>
+</div>
+            </div>
+            </div>
+        </div>
+
     {% endautoescape %}
 {% endfor %}
 
-</div>
 {% endblock %}
-
-{{ pagination.info }}
-{{ pagination.links }}
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for user in users %}
-      <tr>
-        <td>{{ user }}</td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{{ pagination.links }}
