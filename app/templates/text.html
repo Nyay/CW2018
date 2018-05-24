@@ -14,18 +14,15 @@
             {% for el in result%}
     {% autoescape false %}
 {{ text }}<br></p>
-            </div>
-        <div class="col-sm-2">
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Открыть информацию по тексту</button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Открыть карту</button>
-                <div id="myModal2" class="modal fade">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
-<h1 class="modal-title">Место записи</h1>
-</div>
-<div class="modal-body">
+    <button class="btn btn-danger" data-toggle="collapse" data-target="#demo">Открыть информацию по тексту</button>
+    <div id="demo" class="collapse">
+    <p><b>Жанр:</b><br>{{el[2]}}<br></p>
+    <p><b>Респондент:</b><br>{{el[4]}}<br></p>
+    <p><b>Год рождения респондента:</b><br>{{el[5]}}<br></p>
+    <p><b>Место рождения респондента:</b><br>{{el[6]}}<br></p>
+    <p><b>Корреспондент:</b><br>{{el[7]}}<br></p>
+    <p><b>Место записи:</b><br>{{el[8]}}<br></p>
+        <p><b>Локация на карте:</b><br></p>
         <div id="map" style="width: 570px; height: 400px"></div>
    <script type="text/javascript">
         ymaps.ready(init);
@@ -48,31 +45,6 @@
             myMap.geoObjects.add(myPlacemark);
         }
     </script>
-</div>
-<div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
-</div>
-</div>
-</div>
-                <div id="myModal" class="modal fade">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header"><button class="close" type="button" data-dismiss="modal">×</button>
-<h1 class="modal-title">Доп. информация</h1>
-</div>
-<div class="modal-body">
-    <p><b>Жанр:</b><br>{{el[2]}}<br></p>
-    <p><b>Респондент:</b><br>{{el[4]}}<br></p>
-    <p><b>Год рождения респондента:</b><br>{{el[5]}}<br></p>
-    <p><b>Место рождения респондента:</b><br>{{el[6]}}<br></p>
-    <p><b>Корреспондент:</b><br>{{el[7]}}<br></p>
-    <p><b>Место записи:</b><br>{{el[8]}}<br></p>
-</div>
-<div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
-</div>
-</div>
-</div>
-            </div>
-            </div>
         </div>
 
     {% endautoescape %}
