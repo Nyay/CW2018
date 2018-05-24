@@ -18,10 +18,14 @@ def form():
     if len(lex) != 0 or len(gr) != 0:
         if lex[1] == '' and gr[1] == '':
             output2 = setup.setup_line(search.get_lines_2(search.lexgram_search(gr[0], lex[0].lower())))
+            if output2 == {}:
+                return render_template('result.html', result=output2, zero=True)
             return render_template('result.html', result=output2, word_flag=True)
         else:
             output2 = setup.setup_line(search.get_lines_2(search.func_name(search.lexgram_search(gr[0], lex[0].lower()),
                                                        search.lexgram_search(gr[1], lex[1]), int(num))))
+            if output2 == {}:
+                return render_template('result.html', result=output2, zero=True)
             return render_template('result.html', result=output2, word_flag=True)
 
 
@@ -40,4 +44,8 @@ def form_word():
     word = request.args['word']
     if word != '':
         output = setup.setup_line(search.get_lines_2(search.search_word(word.lower())))
+        print(output)
+        if output == {}:
+            print('opopop')
+            return render_template('result.html', result=output, zero=True)
         return render_template('result.html', result=output, word_flag=True)

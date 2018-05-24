@@ -9,6 +9,11 @@
 
     </div>
     </div>
+        {% if zero %}
+<div class="alert alert-danger">
+  <strong>Упс!</strong> По вашему запросу ничего не нашлось, попробуйте еще раз.
+</div>
+{% endif %}
 <ol>
 {% for el in result%}
         {% autoescape false %}
