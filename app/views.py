@@ -29,7 +29,10 @@ def form():
 def text():
     ids = request.args['text']
     text = search.get_text(ids.lower())
-    return render_template('text.html', text=text[0], result=text[1],  coord=text[2])
+    if text[3] is None:
+        return render_template('text.html', text=text[0], result=text[1],  coord=text[2])
+    else:
+        return render_template('text.html', text=text[0], result=text[1], coord=text[2], youtube=text[3])
 
 
 @app.route('/form_word')

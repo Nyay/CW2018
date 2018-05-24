@@ -15,15 +15,21 @@
     {% autoescape false %}
 {{ text }}<br></p>
     <button class="btn btn-danger" data-toggle="collapse" data-target="#demo">Открыть информацию по тексту</button>
+            {% if youtube %}
+            <button class="btn btn-danger" data-toggle="collapse" data-target="#video">Доступно видео</button>
+            <div id="video" class="collapse">
+            <br><iframe width="560" height="315" src="https://www.youtube.com/embed/{{youtube}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            {% endif %}
     <div id="demo" class="collapse">
-    <p><b>Жанр:</b><br>{{el[2]}}<br></p>
+    <p><br><b>Жанр:</b><br>{{el[2]}}<br></p>
     <p><b>Респондент:</b><br>{{el[4]}}<br></p>
     <p><b>Год рождения респондента:</b><br>{{el[5]}}<br></p>
     <p><b>Место рождения респондента:</b><br>{{el[6]}}<br></p>
     <p><b>Корреспондент:</b><br>{{el[7]}}<br></p>
     <p><b>Место записи:</b><br>{{el[8]}}<br></p>
         <p><b>Локация на карте:</b><br></p>
-        <div id="map" style="width: 570px; height: 400px"></div>
+        <div id="map" style="width: 700px; height: 400px"></div>
    <script type="text/javascript">
         ymaps.ready(init);
         var myMap,
@@ -46,7 +52,6 @@
         }
     </script>
         </div>
-
     {% endautoescape %}
 {% endfor %}
 
