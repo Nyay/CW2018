@@ -21,6 +21,7 @@ def main():
                 data = mystem.analyze(line)
                 word_num = 1
                 for el in data:
+                    print(el)
                     if 'analysis' in el:
                         sim = (str(text_num) + '.' + str(line_num) + '.' + str(word_num))
                         word = el['text'].lower()
@@ -48,14 +49,14 @@ def main():
                             else:
                                 output[token] = [str(word), [str(sim)], str(lex), str(gr)]
                         word_num += 1
+                    elif ' - ' in el['text'] or ' – ' in el['text'] or ' - ' in el['text']:
+                        word_num += 1
                 line_num += 1
             print('... TEXT ' + str(i) + ' ANALYSIS COMPLETE...')
         except FileNotFoundError:
             continue
-    print(output)
     for el in output:
-        print(str(output[el][0]))
-        db.execute('INSERT INTO words_ver6 VALUES (?, ?, ?, ?)', (str(output[el][0]), str(output[el][1]),
+        db.execute('INSERT INTO words_ver6_v2 VALUES (?, ?, ?, ?)', (str(output[el][0]), str(output[el][1]),
                                                                  str(output[el][2]), str(output[el][3])))
         db.commit()
     db.close()

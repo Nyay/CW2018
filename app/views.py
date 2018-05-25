@@ -44,8 +44,6 @@ def form_word():
     word = request.args['word']
     if word != '':
         output = setup.setup_line(search.get_lines_2(search.search_word(word.lower())))
-        print(output)
         if output == {}:
-            print('opopop')
             return render_template('result.html', result=output, zero=True)
         return render_template('result.html', result=output, word_flag=True)

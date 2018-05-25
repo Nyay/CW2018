@@ -91,7 +91,7 @@ def lexgram_search(gramms, lex):
         cmd_line += " AND lex = '" + str(lex) + "'"
         if cmd_line.startswith(' AND ') is True:
             cmd_line = cmd_line.strip(' AND ')
-        result = db.execute("SELECT id FROM words_ver6 WHERE " + cmd_line).fetchall()
+        result = db.execute("SELECT id FROM words_ver6_v2 WHERE " + cmd_line).fetchall()
         db.close()
         return compile_ids(result, 0, 1)
     elif lex == '' and gramms.split(',') != ['']:
@@ -103,11 +103,11 @@ def lexgram_search(gramms, lex):
                 cmd_line += " AND gr REGEXP '(,|=)" + str(gramm) + "(,|=)?'"
         if cmd_line.startswith(' AND ') is True:
             cmd_line = cmd_line.strip(' AND ')
-        result = db.execute("SELECT id FROM words_ver6 WHERE " + cmd_line).fetchall()
+        result = db.execute("SELECT id FROM words_ver6_v2 WHERE " + cmd_line).fetchall()
         db.close()
         return compile_ids(result, 0, 1)
     elif lex != '' and gramms.split(',') == ['']:
-        result = db.execute("SELECT id FROM words_ver6 WHERE lex = " + "'" + str(lex) + "'").fetchall()
+        result = db.execute("SELECT id FROM words_ver6_v2 WHERE lex = " + "'" + str(lex) + "'").fetchall()
         return compile_ids(result, 0, 1)
     else:
         return []
