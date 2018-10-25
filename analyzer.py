@@ -6,7 +6,7 @@ mystem = Mystem()
 
 
 def main():
-    db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
+    db = sqlite3.connect('../app/CW2018.db')
     print('...DataBase connected...')
     output = {}
     for i in range(1, 585):

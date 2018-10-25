@@ -2,7 +2,7 @@ import sqlite3
 import pandas
 import re
 
-db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
+db = sqlite3.connect('../app/CW2018.db')
 print('...DataBase connected...')
 
 TextData = pandas.read_csv('TextsData.csv')

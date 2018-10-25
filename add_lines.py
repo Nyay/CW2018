@@ -3,7 +3,7 @@ import re
 
 
 def main():
-    db = sqlite3.connect('CW2018.db')
+    db = sqlite3.connect('../app/CW2018.db')
     for i in range(1, 585):
         try:
             line_num = 1
