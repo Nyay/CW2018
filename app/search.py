@@ -5,7 +5,7 @@ from app import config
 
 
 def get_lines_2(args):
-    db = sqlite3.connect('CW2018.db')
+    db = sqlite3.connect('/home/dtatarinov/folklore_corpus/app/CW2018.db')
     db.create_function("REGEXP", 2, regexp)
     result = {}
     for arg in args:
@@ -19,7 +19,7 @@ def get_lines_2(args):
 
 
 def get_lines(args):
-    db = sqlite3.connect('CW2018.db')
+    db = sqlite3.connect('/home/dtatarinov/folklore_corpus/app/CW2018.db')
     result = {}
     result_2 = []
     for arg in args:
@@ -78,8 +78,7 @@ def search_word(arg):
 
 
 def lexgram_search(gramms, lex):
-
-    db = sqlite3.connect('CW2018.db')
+    db = sqlite3.connect('/home/dtatarinov/folklore_corpus/app/CW2018.db')
     db.create_function("REGEXP", 2, regexp)
 
     if lex != '' and gramms.split(',') != ['']:
