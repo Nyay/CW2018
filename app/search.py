@@ -62,7 +62,8 @@ def func_name(ids_1, ids_2, num):
 
 
 def search_word(arg):
-    db = sqlite3.connect('CW2018.db')
+    db = sqlite3.connect('/home/dtatarinov/folklore_corpus/app/CW2018.db')
+    print('DataBase connected')
     result = db.execute("SELECT ids FROM words_ids WHERE word = " + "'" + str(arg) + "'").fetchall()
     if result == []:
         return []
@@ -114,9 +115,10 @@ def lexgram_search(gramms, lex):
 
 
 def get_text(arg):
-    db = sqlite3.connect('/Users/macbook/Desktop/CW2018/CW2018.db')
+    db = sqlite3.connect('/home/dtatarinov/folklore_corpus/app/CW2018.db')
     data = [db.execute("SELECT * FROM texts_plus WHERE id ='" + str(arg) + "'").fetchall()[0]]
     text = re.sub('\\n', '\\n<br>', data[0][1])
     num = config.locations[data[0][8]]
     youtube_id = data[0][9]
     return [text, data, num, youtube_id]
+
